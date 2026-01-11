@@ -1,0 +1,153 @@
+.ai-guidelines-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.ai-guidelines-modal {
+    background: #FAF0E6;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.ai-guidelines-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    color: #666;
+}
+
+.ai-guidelines-close:hover {
+    background: rgba(73, 136, 196, 0.1);
+    color: #4988C4;
+}
+
+.ai-guidelines-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ai-guidelines-header .ai-icon {
+    font-size: 32px;
+    color: #4988C4;
+}
+
+.ai-guidelines-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.ai-guidelines-intro {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(73, 136, 196, 0.2);
+}
+
+.ai-guidelines-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.ai-guidelines-section.acceptable {
+    background: rgba(76, 175, 80, 0.08);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.ai-guidelines-section.unacceptable {
+    background: rgba(244, 67, 54, 0.05);
+    border: 1px solid rgba(244, 67, 54, 0.15);
+}
+
+.ai-guidelines-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 12px 0;
+}
+
+.ai-guidelines-section .section-icon {
+    font-size: 1.2rem;
+}
+
+.ai-guidelines-section p {
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.ai-guidelines-section ul {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+}
+
+.ai-guidelines-section li {
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+.ai-guidelines-section .section-note {
+    font-style: italic;
+    color: #666;
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ai-guidelines-footer {
+    text-align: center;
+    color: #4988C4;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(73, 136, 196, 0.2);
+}
+
+@media (max-width: 600px) {
+    .ai-guidelines-modal {
+        padding: 20px;
+        max-height: 90vh;
+    }
+
+    .ai-guidelines-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .ai-guidelines-section {
+        padding: 15px;
+    }
+}
