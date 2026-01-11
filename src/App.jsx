@@ -54,7 +54,7 @@ function App() {
           <Suspense fallback={null}>
             {currentPage === 'home' && (
               <ScrollControls pages={7} damping={0.3}>
-                <Experience />
+                <Experience setPage={handlePageChange} />
               </ScrollControls>
             )}
             {currentPage === 'community' && (

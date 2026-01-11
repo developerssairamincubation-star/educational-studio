@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    max-width: 1400px;
+    padding: 2rem 3rem;
+    max-width: 1300px;
     margin: 0 auto;
     gap: 4rem;
     position: relative;
@@ -21,12 +21,12 @@
 
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 620px;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -38,23 +38,15 @@
 }
 
 .hero-image {
-    flex: 0 0 400px;
     position: relative;
-}
-
-@media (max-width: 1024px) {
-    .hero-image {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 400px;
-    }
+    width: 100%;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
     border: 3px solid rgba(73, 136, 196, 0.3);
     object-fit: cover;
 }
@@ -63,7 +55,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 9999px;
     background-color: rgba(73, 136, 196, 0.2);
     border: 1px solid rgba(73, 136, 196, 0.5);
@@ -72,23 +64,23 @@
 
 .semester-badge span {
     color: var(--color-secondary);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 900;
     line-height: 1.1;
-    letter-spacing: -0.033em;
+    letter-spacing: -0.02em;
     color: #1a1a1a;
 }
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 4.5rem;
+        font-size: 3.2rem;
     }
 }
 
@@ -110,8 +102,8 @@ h2 {
 .hero-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
     width: 100%;
     justify-content: center;
 }
@@ -129,10 +121,10 @@ button {
     justify-content: center;
     gap: 0.5rem;
     border-radius: 0.5rem;
-    height: 3rem;
-    padding: 0 2rem;
-    font-weight: 700;
-    font-size: 1rem;
+    height: 2.75rem;
+    padding: 0 1.75rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -157,4 +149,108 @@ button {
 
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hero Content Styles */
+.hero-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.hero-description strong {
+    color: #1a1a1a;
+}
+
+.hero-focus-list {
+    background: rgba(73, 136, 196, 0.08);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.hero-focus-list .focus-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.6rem;
+}
+
+.hero-focus-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hero-focus-list li {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    padding-left: 1.3rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.hero-focus-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.hero-focus-list li strong {
+    color: #1a1a1a;
+}
+
+/* Hero Image Container */
+.hero-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 0 0 350px;
+}
+
+@media (max-width: 1024px) {
+    .hero-image-container {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.hero-person-info {
+    text-align: center;
+}
+
+.hero-person-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.2rem 0;
+}
+
+.hero-person-info p {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    margin: 0;
+    font-weight: 500;
+}
+
+.hero-person-info .institution {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-top: 0.1rem;
 }

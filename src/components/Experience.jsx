@@ -45,7 +45,7 @@ function FloatingObjects() {
     )
 }
 
-export default function Experience() {
+export default function Experience({ setPage }) {
     const scroll = useScroll();
     const { camera } = useThree();
 
@@ -87,7 +87,7 @@ export default function Experience() {
                 <div style={{ position: 'relative', width: '100vw' }}>
                     {/* Section 1: Hero */}
                     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Hero />
+                        <Hero setPage={setPage} />
                     </div>
 
                     {/* Section 2: Why */}
@@ -95,8 +95,8 @@ export default function Experience() {
                         <Why />
                     </div>
 
-                    {/* Section 3: About */}
-                    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 0' }}>
+                    {/* Section 3: About / Professional Philosophy */}
+                    <div id="philosophy-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 0' }}>
                         <About />
                     </div>
 
