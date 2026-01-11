@@ -220,19 +220,16 @@ export default function ISTEStandardsPage() {
                         </div>
 
                         <div className="standard-body">
-                            <a 
-                                href={standard.videoUrl} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="standard-video-link"
-                            >
-                                <div className="standard-image-placeholder">
-                                    <div className="play-button">
-                                        <span className="material-symbols-outlined">play_arrow</span>
-                                    </div>
-                                    <span className="video-label">Watch Playlist</span>
-                                </div>
-                            </a>
+                            <div className="standard-video-container">
+                                <iframe
+                                    src={`https://www.youtube.com/embed/videoseries?list=${standard.videoUrl.split('list=')[1]}`}
+                                    title={`${standard.title} Playlist`}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="youtube-embed"
+                                ></iframe>
+                            </div>
 
                             <div className="standard-subsections">
                                 {standard.subsections.map((subsection) => (
