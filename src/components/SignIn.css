@@ -1,0 +1,142 @@
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FAF0E6;
+    color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.signin-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid rgba(73, 136, 196, 0.3);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signin-input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(73, 136, 196, 0.4);
+    background: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
+    font-size: 1rem;
+}
+
+.signin-input:focus {
+    outline: none;
+    border-color: #4988C4;
+}
+
+.signin-button {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    background: #4988C4;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signin-button:hover {
+    background: #3a6fa3;
+}
+
+.divider {
+    margin: 1.5rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+    background: #FAF0E6;
+    padding: 0 10px;
+    color: rgba(26, 26, 26, 0.5);
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.google-button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #E8D4B8;
+    background: white;
+    color: #1a1a1a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1rem;
+}
+
+.google-button:hover {
+    background: #f9f9f9;
+    border-color: #4988C4;
+    box-shadow: 0 2px 8px rgba(73, 136, 196, 0.15);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.error-message {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.toggle-text {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(26, 26, 26, 0.7);
+}
+
+.toggle-link {
+    color: #4988C4;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+
+.toggle-link:hover {
+    color: #3a6fa3;
+}

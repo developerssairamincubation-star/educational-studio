@@ -1,0 +1,70 @@
+.fab-container {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    pointer-events: auto;
+    /* Ensure it is clickable */
+}
+
+.fab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: #1a1a1a;
+    border: none;
+    box-shadow: 0 0 20px rgba(73, 136, 196, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.fab-button:hover {
+    transform: scale(1.1);
+    background-color: #3a6fa3;
+}
+
+.fab-button .material-symbols-outlined {
+    font-size: 1.75rem;
+}
+
+.fab-tooltip {
+    position: absolute;
+    right: 100%;
+    margin-right: 1rem;
+    background-color: var(--color-surface-dark);
+    border: 1px solid var(--color-surface-border);
+    color: #1a1a1a;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.fab-button:hover .fab-tooltip {
+    opacity: 1;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
