@@ -18,22 +18,31 @@ export default function ISTEStandardsPage() {
             title: "Empowered Learner",
             emoji: "1️⃣",
             videoUrl: "https://www.youtube.com/playlist?list=PL6aVN_9hcQEFKX-rKzeaCzcFGoSk7XNua",
-            description: "You take an active role in setting goals, managing learning, and reflecting on progress, using technology to support and improve your learning journey.",
+            description: "Students leverage technology to take an active role in choosing, achieving and demonstrating competency in their learning goals, informed by the learning sciences.",
             subsections: [
                 {
                     id: "1a",
-                    title: "What This Means",
-                    content: "You take an active role in setting goals, managing learning, and reflecting on progress, using technology to support and improve your learning journey."
+                    title: "Learning Goals",
+                    content: "Students connect their learning needs, strengths and interests to their goals and use technology to help achieve them and reflect on their progress.",
+                    videoLink: true
                 },
                 {
                     id: "1b",
-                    title: "Example",
-                    content: "A student selects a learning quest on Python, completes curated resources at their own pace, reflects on challenges faced, and documents learning growth using a reflection prompt."
+                    title: "Customized Learning Environments",
+                    content: "Students build networks and customize their learning environments in ways that support the learning process.",
+                    videoLink: true
                 },
                 {
                     id: "1c",
-                    title: "What It Looks Like for You",
-                    content: "• Choose a learning quest from this site\n• Watch a short video or read an article\n• Write a short reflection on what they learned\n• Identify one area they still want to improve"
+                    title: "Feedback to Improve Practice",
+                    content: "Students use technology to seek feedback that informs and improves their practice and to demonstrate their learning in a variety of ways.",
+                    videoLink: true
+                },
+                {
+                    id: "1d",
+                    title: "Technology Fundamentals",
+                    content: "Students understand fundamental concepts of how technology works, demonstrate the ability to choose and use current technologies effectively, and are adept at thoughtfully exploring emerging technologies.",
+                    videoLink: true
                 }
             ]
         },
@@ -42,22 +51,31 @@ export default function ISTEStandardsPage() {
             title: "Digital Citizen",
             emoji: "2️⃣",
             videoUrl: "https://www.youtube.com/playlist?list=PL6aVN_9hcQEEvj0Jo1vPupd8QgoAYgkoB",
-            description: "You recognize your rights and responsibilities in digital spaces and act in ways that are safe, ethical, legal, and respectful.",
+            description: "Students recognize the responsibilities and opportunities for positively contributing to their digital communities.",
             subsections: [
                 {
                     id: "2a",
-                    title: "What This Means",
-                    content: "You recognize your rights and responsibilities in digital spaces and act in ways that are safe, ethical, legal, and respectful."
+                    title: "Digital Footprint",
+                    content: "Students manage their digital identity and understand the lasting impact of their online behaviors on themselves and others and make safe, legal and ethical decisions in the digital world.",
+                    videoLink: true
                 },
                 {
                     id: "2b",
-                    title: "Example",
-                    content: "A student engages in online discussions responsibly by communicating respectfully, protecting personal information, crediting sources properly, and considering others' perspectives—learning that digital citizenship is about ethical behavior, accountability, and respect, not just technology use."
+                    title: "Online Interactions",
+                    content: "Students demonstrate empathetic, inclusive interactions online and use technology to responsibly contribute to their communities.",
+                    videoLink: true
                 },
                 {
                     id: "2c",
-                    title: "What It Looks Like for You",
-                    content: "• Understanding online privacy and data use\n• Practicing respectful communication\n• Using AI and digital tools responsibly"
+                    title: "Safeguard Well-being",
+                    content: "Students safeguard their well-being by being intentional about what they do online and how much time they spend online.",
+                    videoLink: true
+                },
+                {
+                    id: "2d",
+                    title: "Digital Privacy",
+                    content: "Students take action to protect their digital privacy on devices and manage their personal data and security while online.",
+                    videoLink: true
                 }
             ]
         },
@@ -214,7 +232,7 @@ export default function ISTEStandardsPage() {
                     >
                         <div className="standard-header">
                             <div className="standard-title-wrapper">
-                                <span className="standard-emoji">{standard.emoji}</span>
+                                <span className="standard-number-badge">{standard.id}</span>
                                 <h2 className="standard-title">{standard.title}</h2>
                             </div>
                         </div>
@@ -241,7 +259,7 @@ export default function ISTEStandardsPage() {
                                             <span className="material-symbols-outlined">
                                                 {expandedSections[`${standard.id}-${subsection.id}`] ? 'expand_less' : 'expand_more'}
                                             </span>
-                                            <span className="subsection-id">{standard.id}.{subsection.id.slice(-1)}</span>
+                                            <span className="subsection-id">1.{standard.id}.{subsection.id.slice(-1)}</span>
                                             <span className="subsection-title">{subsection.title}</span>
                                         </button>
                                         
@@ -254,6 +272,17 @@ export default function ISTEStandardsPage() {
                                                 className="subsection-content"
                                             >
                                                 <p style={{ whiteSpace: 'pre-line' }}>{subsection.content}</p>
+                                                {subsection.videoLink && (
+                                                    <a 
+                                                        href={standard.videoUrl} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="indicator-video-link"
+                                                    >
+                                                        <span className="material-symbols-outlined">play_circle</span>
+                                                        Watch the YouTube video for this Indicator.
+                                                    </a>
+                                                )}
                                             </motion.div>
                                         )}
                                     </div>

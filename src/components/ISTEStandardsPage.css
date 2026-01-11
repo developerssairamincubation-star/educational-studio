@@ -55,8 +55,18 @@
     gap: 15px;
 }
 
-.standard-emoji {
-    font-size: 2.5rem;
+.standard-number-badge {
+    width: 45px;
+    height: 45px;
+    background-color: #4988C4;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
 }
 
 .standard-title {
@@ -165,6 +175,27 @@
     margin: 0;
 }
 
+.indicator-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #4988C4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.indicator-video-link:hover {
+    color: #3a6fa3;
+    text-decoration: underline;
+}
+
+.indicator-video-link .material-symbols-outlined {
+    font-size: 20px;
+}
+
 .standard-description {
     font-size: 1.125rem;
     color: #1a1a1a;
@@ -214,8 +245,10 @@
         font-size: 1.5rem;
     }
 
-    .standard-emoji {
-        font-size: 2rem;
+    .standard-number-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
     }
 
     .subsection-toggle {
