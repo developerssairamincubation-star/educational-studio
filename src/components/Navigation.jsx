@@ -14,9 +14,9 @@ export default function Navigation({ setPage, currentPage, user, handleSignOut }
                 <nav className="nav-links">
                     <a href="#" className={currentPage === 'home' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('home'); }}>Home</a>
                     <a href="#" className={currentPage === 'iste-standards' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('iste-standards'); }}>ISTE Standards</a>
-                    <a href="#">Learning Studio</a>
-                    <a href="#">Quest Hub</a>
-                    <a href="#">XR Zone</a>
+                    <a href="#" className={currentPage === 'learning-studio' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('learning-studio'); }}>Learning Studio</a>
+                    <a href="#" className={currentPage === 'quest-hub' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('quest-hub'); }}>Quest Hub</a>
+                    <a href="#" className={currentPage === 'xr-zone' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('xr-zone'); }}>XR Zone</a>
                     <a href="#" className={currentPage === 'community' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('community'); }}>Community Wall</a>
                 </nav>
 

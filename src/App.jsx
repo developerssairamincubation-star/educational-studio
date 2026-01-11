@@ -7,6 +7,7 @@ import Fab from './components/Fab';
 import SignIn from './components/SignIn';
 import CommunityWall from './components/CommunityWall';
 import ISTEStandardsPage from './components/ISTEStandardsPage';
+import ComingSoon from './components/ComingSoon';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import './index.css';
@@ -62,6 +63,9 @@ function App() {
         {currentPage === 'home' && <Fab />}
         {currentPage === 'community' && <CommunityWall />}
         {currentPage === 'iste-standards' && <ISTEStandardsPage />}
+        {currentPage === 'learning-studio' && <ComingSoon pageName="Learning Studio" />}
+        {currentPage === 'quest-hub' && <ComingSoon pageName="Quest Hub" />}
+        {currentPage === 'xr-zone' && <ComingSoon pageName="XR Zone" />}
       </div>
     </>
   );
