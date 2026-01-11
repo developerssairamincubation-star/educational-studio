@@ -1,6 +1,6 @@
 import './Navigation.css';
 
-export default function Navigation({ setPage, currentPage, user, handleSignOut }) {
+export default function Navigation({ setPage, currentPage }) {
     return (
         <header className="nav-header">
             <div className="nav-container">
@@ -8,7 +8,7 @@ export default function Navigation({ setPage, currentPage, user, handleSignOut }
                     <div className="brand-icon">
                         <span className="material-symbols-outlined">school</span>
                     </div>
-                    <span className="brand-text">Educational Studio</span>
+                    <span className="brand-text">Learning Studio</span>
                 </div>
 
                 <nav className="nav-links">
@@ -20,6 +20,7 @@ export default function Navigation({ setPage, currentPage, user, handleSignOut }
                     <a href="#" className={currentPage === 'community' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setPage('community'); }}>Community Wall</a>
                 </nav>
 
+                {/* User profile section - commented out, re-enable when sign-in is added back
                 <div className="nav-actions">
                     <div className="user-profile">
                         <span className="user-name">{user?.displayName || user?.email}</span>
@@ -27,6 +28,7 @@ export default function Navigation({ setPage, currentPage, user, handleSignOut }
                         <button onClick={handleSignOut} className="sign-out-btn">Log Out</button>
                     </div>
                 </div>
+                */}
 
                 <button className="mobile-menu-btn">
                     <span className="material-symbols-outlined">menu</span>

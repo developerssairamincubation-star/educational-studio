@@ -4,7 +4,7 @@ import './ChatWindow.css';
 
 // System Prompt derived from user's provided content
 const SYSTEM_PROMPT = `
-You are the AI assistant for the "Educational Studio" website. 
+You are the AI assistant for the "Learning Studio" website. 
 Your goal is to answer questions strictly based on the following context. 
 If a user asks about something outside this context, politely steer them back to the educational topics.
 
@@ -38,7 +38,7 @@ CONTEXT:
 
 export default function ChatWindow({ onClose }) {
     const [messages, setMessages] = useState([
-        { role: 'model', text: 'Hello! I am the Educational Studio Assistant. How can I help you navigate this learning space?' }
+        { role: 'model', text: 'Hello! I am the Learning Studio Assistant. How can I help you navigate this learning space?' }
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);

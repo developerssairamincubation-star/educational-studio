@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="footer-intro">
                         <div className="footer-brand">
                             <span className="material-symbols-outlined">school</span>
-                            <span className="brand-name">Educational Studio</span>
+                            <span className="brand-name">Learning Studio</span>
                         </div>
                         <p>Empowering the next generation of digital leaders through ethical innovation and immersive learning.</p>
                     </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 Educational Studio. All rights reserved.</p>
+                    <p>© 2026 Learning Studio. All rights reserved.</p>
                     <div className="footer-legal">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>

@@ -78,13 +78,48 @@
 
 .standard-body {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-bottom: 30px;
     align-items: start;
 }
 
+.learning-content {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(73, 136, 196, 0.15);
+}
 
+.learning-section {
+    margin-bottom: 20px;
+}
+
+.learning-section:last-child {
+    margin-bottom: 0;
+}
+
+.learning-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4988C4;
+    margin: 0 0 10px 0;
+}
+
+.learning-section-title .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.learning-section p {
+    color: #1a1a1a;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
 
 .standard-video-container {
     position: relative;
@@ -249,6 +284,18 @@
         width: 36px;
         height: 36px;
         font-size: 1.2rem;
+    }
+
+    .learning-content {
+        padding: 20px;
+    }
+
+    .learning-section-title {
+        font-size: 0.95rem;
+    }
+
+    .learning-section p {
+        font-size: 0.9rem;
     }
 
     .subsection-toggle {
