@@ -5,9 +5,7 @@ export default function Navigation({ setPage, currentPage }) {
         <header className="nav-header">
             <div className="nav-container">
                 <div className="nav-brand" onClick={() => setPage('home')} style={{ cursor: 'pointer' }}>
-                    <div className="brand-icon">
-                        <span className="material-symbols-outlined">school</span>
-                    </div>
+                    <img src="/images/sairamlogo.jpeg" alt="Sairam Logo" className="brand-logo" />
                     <span className="brand-text">Learning Studio</span>
                 </div>
 

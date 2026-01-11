@@ -348,6 +348,16 @@ export default function ISTEStandardsPage() {
 
                         <p className="standard-description">{standard.description}</p>
 
+                        <a 
+                            href="https://iste.org/standards/students" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="learn-more-link"
+                        >
+                            <span className="material-symbols-outlined">open_in_new</span>
+                            Learn more on this topic
+                        </a>
+
                         {index < standards.length - 1 && <div className="standard-divider"></div>}
                     </motion.div>
                 ))}
