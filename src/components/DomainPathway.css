@@ -1,0 +1,324 @@
+.domain-pathway-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FAF0E6 0%, #f5e6d3 100%);
+    padding-top: 80px;
+}
+
+.domain-pathway-hero {
+    background: linear-gradient(135deg, var(--domain-color) 0%, #333 100%);
+    padding: 40px 40px 60px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.back-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.domain-pathway-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.domain-pathway-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    backdrop-filter: blur(10px);
+}
+
+.domain-pathway-icon-wrapper .material-symbols-outlined {
+    font-size: 45px;
+    color: white;
+}
+
+.domain-pathway-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.domain-pathway-description {
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+.domain-pathway-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+}
+
+.pathway-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pathway-intro h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.pathway-intro h2 .material-symbols-outlined {
+    font-size: 32px;
+    color: #4988C4;
+}
+
+.pathway-intro p {
+    font-size: 1.05rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.pathway-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.pathway-item {
+    display: flex;
+    gap: 25px;
+}
+
+.pathway-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.pathway-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.pathway-line {
+    width: 4px;
+    flex-grow: 1;
+    opacity: 0.3;
+    margin: 5px 0;
+}
+
+.pathway-card {
+    flex-grow: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(73, 136, 196, 0.1);
+}
+
+.pathway-card-content {
+    flex-grow: 1;
+}
+
+.course-step {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4988C4;
+    background: rgba(73, 136, 196, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pathway-card h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.course-instruction {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.start-course-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--btn-color);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.start-course-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.start-course-btn .material-symbols-outlined {
+    font-size: 22px;
+}
+
+.pathway-completion {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px dashed rgba(73, 136, 196, 0.3);
+}
+
+.completion-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.completion-badge .material-symbols-outlined {
+    font-size: 40px;
+    color: white;
+}
+
+.pathway-completion h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.pathway-completion p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .domain-pathway-hero {
+        padding: 30px 20px 50px;
+    }
+
+    .back-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    .domain-pathway-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .domain-pathway-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .domain-pathway-icon-wrapper .material-symbols-outlined {
+        font-size: 35px;
+    }
+
+    .domain-pathway-content {
+        padding: 40px 20px 60px;
+    }
+
+    .pathway-intro h2 {
+        font-size: 1.4rem;
+    }
+
+    .pathway-item {
+        gap: 15px;
+    }
+
+    .pathway-connector {
+        width: 40px;
+    }
+
+    .pathway-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .pathway-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+    }
+
+    .pathway-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .start-course-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pathway-completion {
+        padding: 30px 20px;
+    }
+}

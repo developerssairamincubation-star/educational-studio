@@ -8,6 +8,8 @@ import Fab from './components/Fab';
 import CommunityWall from './components/CommunityWall';
 import ISTEStandardsPage from './components/ISTEStandardsPage';
 import ComingSoon from './components/ComingSoon';
+import LearningStudio from './components/LearningStudio';
+import DomainPathway from './components/DomainPathway';
 // import { auth } from './firebase';
 // import { onAuthStateChanged } from 'firebase/auth';
 import './index.css';
@@ -16,6 +18,12 @@ function App() {
   // const [user, setUser] = useState(null);
   // const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedDomain, setSelectedDomain] = useState(null);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    setSelectedDomain(null); // Reset domain selection when changing pages
+  };
 
   // useEffect(() => {
   //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -59,11 +67,16 @@ function App() {
       </div>
 
       <div className="ui-overlay" style={{ position: 'relative', zIndex: 10 }}>
-        <Navigation setPage={setCurrentPage} currentPage={currentPage} />
+        <Navigation setPage={handlePageChange} currentPage={currentPage} />
         {currentPage === 'home' && <Fab />}
         {currentPage === 'community' && <CommunityWall />}
         {currentPage === 'iste-standards' && <ISTEStandardsPage />}
-        {currentPage === 'learning-studio' && <ComingSoon pageName="Learning Studio" />}
+        {currentPage === 'learning-studio' && !selectedDomain && (
+          <LearningStudio onSelectDomain={(domain) => setSelectedDomain(domain)} />
+        )}
+        {currentPage === 'learning-studio' && selectedDomain && (
+          <DomainPathway domain={selectedDomain} onBack={() => setSelectedDomain(null)} />
+        )}
         {currentPage === 'quest-hub' && <ComingSoon pageName="Quest Hub" />}
         {currentPage === 'xr-zone' && <ComingSoon pageName="XR Zone" />}
       </div>

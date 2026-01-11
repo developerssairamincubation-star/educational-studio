@@ -1,0 +1,202 @@
+.learning-studio-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FAF0E6 0%, #f5e6d3 100%);
+    padding-top: 80px;
+}
+
+.learning-studio-hero {
+    background: linear-gradient(135deg, #4988C4 0%, #3a6fa3 100%);
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+}
+
+.learning-studio-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.learning-studio-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.learning-studio-subtitle {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.learning-studio-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.learning-studio-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.domain-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(73, 136, 196, 0.1);
+}
+
+.domain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--domain-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.domain-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(73, 136, 196, 0.2);
+}
+
+.domain-card:hover::before {
+    transform: scaleX(1);
+}
+
+.domain-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--domain-color), var(--domain-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.domain-icon {
+    font-size: 35px;
+    color: white;
+}
+
+.domain-title {
+    font-size: 1.35rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.domain-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.domain-courses-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #4988C4;
+    font-weight: 500;
+}
+
+.domain-courses-count .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.domain-arrow {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(73, 136, 196, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.domain-arrow .material-symbols-outlined {
+    font-size: 22px;
+    color: #4988C4;
+    transition: transform 0.3s ease;
+}
+
+.domain-card:hover .domain-arrow {
+    background: #4988C4;
+}
+
+.domain-card:hover .domain-arrow .material-symbols-outlined {
+    color: white;
+    transform: translateX(3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .learning-studio-hero {
+        padding: 40px 20px;
+    }
+
+    .learning-studio-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .learning-studio-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .learning-studio-intro {
+        font-size: 1rem;
+    }
+
+    .learning-studio-content {
+        padding: 40px 20px;
+    }
+
+    .domains-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .domain-card {
+        padding: 25px 20px;
+    }
+
+    .domain-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .domain-icon {
+        font-size: 30px;
+    }
+
+    .domain-title {
+        font-size: 1.2rem;
+    }
+}
