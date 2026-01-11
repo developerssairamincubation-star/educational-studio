@@ -13,12 +13,6 @@ export default function Fab() {
 
             <div className="fab-container">
                 <button
-                    className="fab-guidelines-link"
-                    onClick={() => setShowGuidelines(true)}
-                >
-                    AI Guidelines
-                </button>
-                <button
                     className="fab-button"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle AI Assistant"
@@ -35,6 +29,12 @@ export default function Fab() {
                             Ask AI Assistant
                         </div>
                     )}
+                </button>
+                <button
+                    className="fab-guidelines-link"
+                    onClick={() => setShowGuidelines(true)}
+                >
+                    AI Guidelines
                 </button>
             </div>
 
