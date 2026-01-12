@@ -9,9 +9,9 @@ const domains = [
         color: '#02569B',
         description: 'Build beautiful cross-platform mobile apps',
         courses: [
-            { name: 'Python for Beginners', url: 'https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3' },
-            { name: 'Object Oriented Programming with Python', url: 'https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc' },
-            { name: 'Flutter Course for Beginners', url: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ' }
+            { name: 'Python for Beginners', url: 'https://www.youtube.com/playlist?list=PLzqzXq9nHy6RtapfHMogW_Y50Ls7Djp7T' },
+            { name: 'Object Oriented Programming with Python', url: 'https://youtu.be/Ej_02ICOIgs?si=lxDqzBLdsxanexRc' },
+            { name: 'Flutter Course for Beginners', url: 'https://youtu.be/VPvVD8t02U8?si=OgrDZU1gmxcvvQaF' }
         ]
     },
     {
@@ -21,10 +21,10 @@ const domains = [
         color: '#FF6F00',
         description: 'Master AI and machine learning fundamentals',
         courses: [
-            { name: 'Python for Beginners', url: 'https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3' },
-            { name: 'Object Oriented Programming with Python', url: 'https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc' },
-            { name: 'Neural Networks', url: 'https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi' },
-            { name: 'AI Fundamentals', url: 'https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF' }
+            { name: 'Python for Beginners', url: 'https://youtu.be/ix9cRaBkVe0?si=gssnytsDzs3oKs8c' },
+            { name: 'Object Oriented Programming with Python', url: 'https://youtu.be/Ej_02ICOIgs?si=lxDqzBLdsxanexRc' },
+            { name: 'AI Fundamentals', url: 'https://youtube.com/playlist?list=PLOspHqNVtKADfxkuDuHduUkDExBpEt3DF&si=6SC9i92S3ZJ9rFga' },
+            { name: 'Neural Networks', url: 'https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=YZovJpTl74lwFX8_' }
         ]
     },
     {
@@ -34,9 +34,9 @@ const domains = [
         color: '#FA7343',
         description: 'Create iOS and macOS applications',
         courses: [
-            { name: 'Python for Beginners', url: 'https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3' },
-            { name: 'Object Oriented Programming with Python', url: 'https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc' },
-            { name: 'Swift Programming', url: 'https://www.youtube.com/playlist?list=PL5PR3UyfTWvfacnfUsvNcxIiKIgidNRoW' }
+            { name: 'Python for Beginners', url: 'https://www.youtube.com/playlist?list=PLzqzXq9nHy6RtapfHMogW_Y50Ls7Djp7T' },
+            { name: 'Object Oriented Programming with Python', url: 'https://youtu.be/Ej_02ICOIgs?si=lxDqzBLdsxanexRc' },
+            { name: 'Swift', url: 'https://www.youtube.com/watch?v=8Xg7E9shq0U&ab_channel=freeCodeCamp.org' }
         ]
     },
     {
@@ -46,10 +46,10 @@ const domains = [
         color: '#F7DF1E',
         description: 'Build modern websites and web applications',
         courses: [
-            { name: 'HTML & CSS Full Course', url: 'https://www.youtube.com/playlist?list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB' },
-            { name: 'CSS Projects', url: 'https://www.youtube.com/playlist?list=PLjwm_8O3suyOgDS_Z8AWbbq3zpCmR-WE9' },
-            { name: 'JavaScript Tutorial', url: 'https://www.youtube.com/playlist?list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4' },
-            { name: 'Object-Oriented Programming in JavaScript', url: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7' }
+            { name: 'HTML & CSS Full Course', url: 'https://youtu.be/G3e-cpL7ofc?si=VWHz-PnSmNX35-gD' },
+            { name: 'CSS Projects', url: 'https://youtu.be/TzuWIHGFKCQ?si=BTy3XWed3eaqz6ir' },
+            { name: 'JavaScript Tutorial', url: 'https://www.youtube.com/watch?v=EerdGm-ehJQ' },
+            { name: 'Object-Oriented Programming in JavaScript', url: 'https://youtu.be/JEmHMZ2Q4oU?si=Ieq9kEve_LdDTVIn' }
         ]
     },
     {
@@ -59,10 +59,10 @@ const domains = [
         color: '#00897B',
         description: 'Learn electronics and embedded systems',
         courses: [
-            { name: 'Basic Electronics', url: 'https://www.youtube.com/playlist?list=PLwjK_iyK4LLCAN2tagNsLVXsyfg3gJsqZ' },
-            { name: 'How to Use Multimeter Properly', url: 'https://www.youtube.com/watch?v=TdUK6RPdIrA' },
-            { name: 'Arduino Course', url: 'https://www.youtube.com/playlist?list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP' },
-            { name: 'MATLAB Onramp Learning', url: 'https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted' }
+            { name: 'Basic Electronics', url: 'https://youtube.com/playlist?list=PLWv9VM947MKi_7yJ0_FCfzTBXpQU-Qd3K&si=iT9V9_aK6ReI4WaC' },
+            { name: 'How to Use Multimeter Properly?', url: 'https://youtu.be/MRm7--DwOPU?si=1IHWMtBpXNDBmy78' },
+            { name: 'Arduino Course', url: 'https://youtu.be/DPqiIzK97K0?si=2g5bk-iNRdWFegU9' },
+            { name: 'MATLAB Onramp Learning', url: 'https://docs.google.com/document/d/1P5lj-sk0vViQcOQhuq8XbDgR6UragAfe2UgE9ISY47U/edit?usp=sharing' }
         ]
     },
     {
@@ -72,7 +72,7 @@ const domains = [
         color: '#000000',
         description: 'Create immersive AR/VR experiences',
         courses: [
-            { name: 'C# Free Tutorial Course (Beginner to Advanced)', url: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN' },
+            { name: 'C# Free Tutorial Course (Beginner to Advanced)', url: 'https://youtu.be/qZpMX8Re_2Q?si=tmxiobsWZOzPlqfz' },
             { name: 'Unity Beginner Tutorials', url: 'https://www.youtube.com/playlist?list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6' }
         ]
     },
@@ -83,9 +83,9 @@ const domains = [
         color: '#313131',
         description: 'Build professional games with Unreal Engine 5',
         courses: [
-            { name: 'Unreal Engine 5 Beginner Tutorial', url: 'https://www.youtube.com/playlist?list=PLncmXJdh4q89l3xk0w-xA97L_w7ZCvgF9' },
-            { name: 'Blueprint for Beginners', url: 'https://www.youtube.com/playlist?list=PLZlv_N0_O1gY35ezlSQn1sWOGfh4C7ewO' },
-            { name: 'Blueprint for Intermediate', url: 'https://www.youtube.com/playlist?list=PLZlv_N0_O1gbggHiwNP2JBXGeD2h12tbB' }
+            { name: 'Unreal Engine 5 Beginner Tutorial', url: 'https://www.youtube.com/watch?v=L9qixi858Ag&list=PLIn-yd4vnXbjWeYqU7epakdnVzoysMToy' },
+            { name: 'Blueprint for Beginners', url: 'https://youtu.be/Xw9QEMFInYU?list=PLncmXJdh4q88DFCEVuGpOY3AGQwBvoQnh' },
+            { name: 'Blueprint for Intermediate', url: 'https://youtu.be/cFm4tZqgYvQ?list=PLncmXJdh4q88DFCEVuGpOY3AGQwBvoQnh' }
         ]
     },
     {
@@ -95,10 +95,10 @@ const domains = [
         color: '#1565C0',
         description: 'Master CAD and mechanical engineering principles',
         courses: [
-            { name: 'Engineering Basics', url: 'https://www.youtube.com/playlist?list=PLOahOE6DpL4r91oheXMj9qGJfsKTQHorj' },
-            { name: 'Creo Tutorial', url: 'https://www.youtube.com/playlist?list=PLkMYhICFMsGajeARsY7N1t-YpHdKPF6m0' },
-            { name: 'GD&T Explained (English Full Lessons)', url: 'https://www.youtube.com/playlist?list=PLqnl_qKVVb9Fq_MTlmH0vPd4bOBZ2-nPp' },
-            { name: 'Learn GD&T through Tamil Full Course', url: 'https://www.youtube.com/playlist?list=PLqnl_qKVVb9Hj-1LcFk9lKs1X8o5oF0QM' }
+            { name: 'Engineering Basics', url: 'https://youtube.com/playlist?list=PLvgvBzfbOtFsBS3xELO8dAnYn9s35zFGz&si=to8fzmMKclifgCkK' },
+            { name: 'Creo Tutorial', url: 'https://youtu.be/hhJPfN_0qiI?si=TyJB3OynvMReulf_' },
+            { name: 'Learn GD&T through Tamil Full Course', url: 'https://youtu.be/d3f50gqJRxY?si=c0etQ9h7L9Ja4LPU' },
+            { name: 'GD&T Explained (English Full Lessons)', url: 'https://youtube.com/playlist?list=PLKaojPU8IOnHU75NcH7Muq7K92rTNekXI&si=jhrjP4gY4tiozjxq' }
         ]
     },
     {
@@ -108,9 +108,9 @@ const domains = [
         color: '#6D4C41',
         description: 'Learn architectural design and drafting tools',
         courses: [
-            { name: 'AutoCAD - Complete Tutorial for Beginners', url: 'https://www.youtube.com/playlist?list=PLW8lH4tfQP-mbJnSswFV7iYXwV2qLJCmB' },
-            { name: 'AutoCAD - Complete Tutorial for Intermediates', url: 'https://www.youtube.com/playlist?list=PLW8lH4tfQP-lZkFH7bQCMcT8YGzLLbI-K' },
-            { name: 'Learn SketchUp', url: 'https://www.youtube.com/playlist?list=PLsE8sC4wp2My-w8eDTzdbEcxmX3HcmJPJ' }
+            { name: 'AutoCAD - Complete Tutorial for Beginners', url: 'https://youtu.be/pvKVy-eMDYc?si=LlCsfLScZdlF79no' },
+            { name: 'AutoCAD - Complete Tutorial for Intermediates', url: 'https://youtu.be/Ra3pPzGxKHI?si=X7O6ZQ435bMO_GZn' },
+            { name: 'Learn SketchUp', url: 'https://youtube.com/playlist?list=PLEQT0qjXe6zgCl0ITWmUg5OuG7Zjzf38F&si=MCGH6fpszasTXk3y' }
         ]
     }
 ];
