@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AIGuidelines from './AIGuidelines';
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ setPage }) {
     const [showAIGuidelines, setShowAIGuidelines] = useState(false);
 
     return (
@@ -34,15 +34,27 @@ export default function Footer() {
                             </div>
                             <div className="footer-column">
                                 <h4>Connect</h4>
-                                <a href="#">Community Wall</a>
-                                <a href="#">Twitter / X</a>
-                                <a href="#">LinkedIn</a>
+                                <a href="#" onClick={(e) => { e.preventDefault(); setPage('community'); }}>Community Wall</a>
+                                <a href="https://x.com/SairamInstitute" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                                <a href="https://www.linkedin.com/company/sairaminstitutions/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                            <div className="footer-column">
+                                <h4>Contact Us</h4>
+                                <p className="contact-name">Dr. Sai Prakash Leo Muthu</p>
+                                <a href="tel:7845127111">
+                                    <span className="material-symbols-outlined">phone</span>
+                                    7845127111
+                                </a>
+                                <a href="mailto:ceo@sairam.edu.in">
+                                    <span className="material-symbols-outlined">email</span>
+                                    ceo@sairam.edu.in
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div className="footer-bottom">
-                        <p>© 2026 Learning Studio. All rights reserved.</p>
+                        <p>© 2026 Learning Studio. All rights reserved to Sairam EOMS.</p>
                         <div className="footer-legal">
                             <a href="#">Privacy Policy</a>
                             <a href="#">Terms of Service</a>

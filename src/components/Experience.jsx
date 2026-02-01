@@ -110,7 +110,7 @@ export default function Experience({ setPage }) {
                         <ISTEStandards />
                     </div>
 
-                    <Footer />
+                    <Footer setPage={setPage} />
                 </div>
             </Scroll>
         </>
