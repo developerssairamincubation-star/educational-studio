@@ -35,6 +35,134 @@
     margin: 0 auto;
 }
 
+/* Leader in Me Results Section */
+.leader-results-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 20px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.leader-results-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.leader-results-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 auto 6px;
+    text-align: center;
+}
+
+.leader-results-header p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.leader-results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.leader-category-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-header {
+    text-align: center;
+}
+
+.category-header h3 {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    background: var(--category-color);
+    padding: 4px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leader-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 110px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, var(--card-color), color-mix(in srgb, var(--card-color) 80%, black));
+    color: white;
+}
+
+.flip-card-front h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+.flip-card-back {
+    background: white;
+    border: 2px solid var(--card-color);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    font-size: 0.65rem;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+}
+
 .iste-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -294,6 +422,46 @@
 
     .iste-intro {
         font-size: 1rem;
+    }
+
+    /* Leader in Me Responsive */
+    .leader-results-section {
+        padding: 16px 12px;
+        margin-bottom: 25px;
+    }
+
+    .leader-results-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .leader-results-header p {
+        font-size: 0.75rem;
+    }
+
+    .leader-results-grid {
+        gap: 16px;
+    }
+
+    .category-header h3 {
+        font-size: 0.7rem;
+        padding: 4px 16px;
+    }
+
+    .leader-cards-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .flip-card {
+        height: 100px;
+    }
+
+    .flip-card-front h4 {
+        font-size: 0.7rem;
+    }
+
+    .flip-card-back p {
+        font-size: 0.6rem;
     }
 
     .standard-body {

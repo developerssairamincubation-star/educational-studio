@@ -2,6 +2,63 @@ import { motion } from 'framer-motion';
 import './ISTEStandardsPage.css';
 
 export default function ISTEStandardsPage() {
+    const leaderInMeResults = [
+        {
+            category: 'LEADERSHIP',
+            color: '#DC3545',
+            items: [
+                {
+                    title: 'STUDENT LEADERSHIP',
+                    description: 'Students develop the mindsets, behaviors and skills to be effective, lifelong leaders.'
+                },
+                {
+                    title: 'STAFF LEADERSHIP',
+                    description: 'Staff are provided with support to build their personal and professional capacity so they can confidently live, model, and teach life-ready leadership skills.'
+                },
+                {
+                    title: 'FAMILY & COMMUNITY ENGAGEMENT',
+                    description: 'Families and community organizations are valued school partners who support student development.'
+                }
+            ]
+        },
+        {
+            category: 'CULTURE',
+            color: '#28A745',
+            items: [
+                {
+                    title: 'SUPPORTIVE ENVIRONMENT FOR STUDENTS',
+                    description: 'School is a welcoming and supportive environment where students feel valued and actively engaged in leadership and decision making.'
+                },
+                {
+                    title: 'SUPPORTIVE ENVIRONMENT FOR STAFF',
+                    description: 'School is a supportive work environment, where staff members feel fulfilled, empowered, and confident in their ability to make a difference by working together.'
+                }
+            ]
+        },
+        {
+            category: 'ACADEMICS',
+            color: '#007BFF',
+            items: [
+                {
+                    title: 'GOAL ACHIEVEMENT',
+                    description: 'Students have the knowledge, opportunity, and support to set and achieve meaningful individual goals that are connected to larger schoolwide goals.'
+                },
+                {
+                    title: 'EMPOWERED LEARNERS',
+                    description: 'Students have the mindsets, skills, and supportive relationships they need to take ownership of their learning.'
+                },
+                {
+                    title: 'EMPOWERING TEACHERS',
+                    description: 'Teachers positively impact students\' academic growth by using evidence-based instructional practices that empower students to lead their own learning.'
+                },
+                {
+                    title: 'LIFE-READINESS (SECONDARY)',
+                    description: 'Students develop the skills and mindsets needed to succeed in college, career, and life.'
+                }
+            ]
+        }
+    ];
+
     const standards = [
         {
             id: 1,
@@ -288,6 +345,58 @@ export default function ISTEStandardsPage() {
                         ensure that learning is a student-driven process.
                     </p>
                 </motion.div>
+            </div>
+
+            {/* Leader in Me Results Section */}
+            <div className="leader-results-section">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="leader-results-header"
+                >
+                    <h2>Measurable Results Targeted by Leader in Me</h2>
+                    <p>Building comprehensive student development across leadership, culture, and academics</p>
+                </motion.div>
+
+                <div className="leader-results-grid">
+                    {leaderInMeResults.map((section, sectionIndex) => (
+                        <div key={section.category} className="leader-category-section">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+                                viewport={{ once: true }}
+                                className="category-header"
+                                style={{ '--category-color': section.color }}
+                            >
+                                <h3>{section.category}</h3>
+                            </motion.div>
+
+                            <div className="leader-cards-container">
+                                {section.items.map((item, itemIndex) => (
+                                    <motion.div
+                                        key={item.title}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: (sectionIndex * 0.1) + (itemIndex * 0.1) }}
+                                        viewport={{ once: true }}
+                                        className="flip-card"
+                                    >
+                                        <div className="flip-card-inner">
+                                            <div className="flip-card-front" style={{ '--card-color': section.color }}>
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                            <div className="flip-card-back" style={{ '--card-color': section.color }}>
+                                                <p>{item.description}</p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <div className="iste-content">
