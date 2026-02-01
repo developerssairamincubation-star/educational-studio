@@ -59,6 +59,62 @@ export default function ISTEStandardsPage() {
         }
     ];
 
+    const transformationalPrinciples = [
+        {
+            title: 'Nurture',
+            icon: '🌱',
+            color: '#E8A657',
+            items: [
+                {
+                    subtitle: 'Cultivate Belonging',
+                    description: 'Create learning cultures that ensure safety, belonging, and foster empathy, creativity, and collaboration.'
+                },
+                {
+                    subtitle: 'Connect Learning to the Learner',
+                    description: 'Hold high expectations and tailor instruction to meet individual needs through differentiation strategies.'
+                },
+                {
+                    subtitle: 'Ensure Opportunity',
+                    description: 'Celebrate unique experiences, strengths, and voices while reducing barriers to meaningful learning.'
+                }
+            ]
+        },
+        {
+            title: 'Guide',
+            icon: '🧭',
+            color: '#7DC7C5',
+            items: [
+                {
+                    subtitle: 'Spark Curiosity',
+                    description: 'Connect content to prior knowledge, experiences, and passions to inspire engagement and expression.'
+                },
+                {
+                    subtitle: 'Develop Expertise',
+                    description: 'Use evidence-based practices around key concepts, multiple modes of inquiry, and intentional practice.'
+                },
+                {
+                    subtitle: 'Elevate Reflection',
+                    description: 'Provide timely feedback that encourages critical thinking and helps students monitor their own progress.'
+                }
+            ]
+        },
+        {
+            title: 'Empower',
+            icon: '🏛️',
+            color: '#5BB2D9',
+            items: [
+                {
+                    subtitle: 'Prioritize Authentic Experiences',
+                    description: 'Create opportunities for real-world learning through performance-based projects and assessments.'
+                },
+                {
+                    subtitle: 'Ignite Agency',
+                    description: 'Encourage student agency through learner-led approaches and flexible learning formats for exploration.'
+                }
+            ]
+        }
+    ];
+
     const standards = [
         {
             id: 1,
@@ -396,6 +452,54 @@ export default function ISTEStandardsPage() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            {/* Transformational Learning Section */}
+            <div className="transformational-learning-section">
+                <div className="transformational-content">
+                    <div className="transformational-cards">
+                        {transformationalPrinciples.map((principle, index) => (
+                            <motion.div
+                                key={principle.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.15 }}
+                                viewport={{ once: true }}
+                                className="transformational-flip-card"
+                            >
+                                <div className="transformational-flip-inner">
+                                    <div className="transformational-flip-front" style={{ '--principle-color': principle.color }}>
+                                        <span className="principle-icon-large">{principle.icon}</span>
+                                        <h3>{principle.title}</h3>
+                                    </div>
+                                    <div className="transformational-flip-back" style={{ '--principle-color': principle.color }}>
+                                        <div className="flip-back-content">
+                                            {principle.items.map((item, itemIndex) => (
+                                                <div key={itemIndex} className="principle-item-flip">
+                                                    <strong>{item.subtitle}</strong> {item.description}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                    
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="transformational-image"
+                    >
+                        <img 
+                            src="/images/tranforming_learning.png" 
+                            alt="Transformational Learning Principles" 
+                        />
+                        <p className="image-caption">Transformational Learning Framework</p>
+                    </motion.div>
                 </div>
             </div>
 

@@ -163,6 +163,136 @@
     text-align: center;
 }
 
+/* Transformational Learning Section */
+.transformational-learning-section {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 40px 20px;
+}
+
+.transformational-content {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+    align-items: center;
+}
+
+.transformational-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Transformational Flip Cards */
+.transformational-flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 380px;
+}
+
+.transformational-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.transformational-flip-card:hover .transformational-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.transformational-flip-front,
+.transformational-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transformational-flip-front {
+    background: linear-gradient(135deg, var(--principle-color), color-mix(in srgb, var(--principle-color) 70%, black));
+    color: white;
+}
+
+.principle-icon-large {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.transformational-flip-front h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.transformational-flip-back {
+    background: white;
+    border: 3px solid var(--principle-color);
+    transform: rotateY(180deg);
+    padding: 20px;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
+
+.flip-back-content {
+    width: 100%;
+    text-align: left;
+}
+
+.principle-item-flip {
+    font-size: 0.75rem;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.principle-item-flip:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.principle-item-flip strong {
+    color: var(--principle-color);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.transformational-image {
+    text-align: center;
+}
+
+.transformational-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
 .iste-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -462,6 +592,46 @@
 
     .flip-card-back p {
         font-size: 0.6rem;
+    }
+
+    /* Transformational Learning Responsive */
+    .transformational-learning-section {
+        padding: 30px 16px;
+        margin-bottom: 40px;
+    }
+
+    .transformational-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .transformational-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .transformational-flip-card {
+        height: 300px;
+    }
+
+    .principle-icon-large {
+        font-size: 3.5rem;
+    }
+
+    .transformational-flip-front h3 {
+        font-size: 1.5rem;
+    }
+
+    .principle-item-flip {
+        font-size: 0.75rem;
+    }
+
+    .principle-item-flip strong {
+        font-size: 0.8rem;
+    }
+
+    .transformational-image img {
+        max-width: 100%;
     }
 
     .standard-body {
