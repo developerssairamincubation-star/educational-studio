@@ -2,14 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { db, auth, storage } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot, updateDoc, doc, arrayUnion, arrayRemove, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import CommunitySignIn from './CommunitySignIn';
 import './CommunityWall.css';
 
-const CommunityWall = () => {
+const CommunityWall = ({ setPage }) => {
     const [posts, setPosts] = useState([]);
     const [newPost, setNewPost] = useState('');
     const [image, setImage] = useState(null);
     const [uploading, setUploading] = useState(false);
-    const [user, setUser] = useState(auth.currentUser);
+    const [user, setUser] = useState(null);
+
+    // Listen to authentication state changes
+    useEffect(() => {
+        const unsubscribeAuth = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribeAuth();
+    }, []);
 
     useEffect(() => {
         const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
@@ -18,6 +28,11 @@ const CommunityWall = () => {
         });
         return () => unsubscribe();
     }, []);
+
+    // Show sign-in page if user is not authenticated
+    if (!user) {
+        return <CommunitySignIn onBack={() => setPage('home')} />;
+    }
 
     const compressImage = (file) => {
         return new Promise((resolve) => {
@@ -141,11 +156,39 @@ const CommunityWall = () => {
         });
     };
 
+    const handleSignOut = async () => {
+        try {
+            await signOut(auth);
+        } catch (error) {
+            console.error('Error signing out:', error);
+        }
+    };
+
     return (
         <div className="community-wall-container">
             <div className="community-header">
-                <h2>Community Wall</h2>
-                <p>Connect, share, and learn with your peers.</p>
+                <div className="header-content">
+                    <div>
+                        <h2>Community Wall</h2>
+                        <p>Connect, share, and learn with your peers.</p>
+                    </div>
+                    <div className="user-profile-section">
+                        {user.photoURL ? (
+                            <img src={user.photoURL} alt={user.displayName} className="user-avatar" />
+                        ) : (
+                            <div className="user-avatar-placeholder">
+                                {(user.displayName || user.email).charAt(0).toUpperCase()}
+                            </div>
+                        )}
+                        <div className="user-info">
+                            <span className="user-name">{user.displayName || user.email}</span>
+                            <button onClick={handleSignOut} className="signout-btn">
+                                <span className="material-symbols-outlined">logout</span>
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="create-post-container">

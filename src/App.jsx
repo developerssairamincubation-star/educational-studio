@@ -74,7 +74,7 @@ function App() {
       <div className="ui-overlay" style={{ position: 'relative', zIndex: 10 }}>
         <Navigation setPage={handlePageChange} currentPage={currentPage} />
         <Fab />
-        {currentPage === 'community' && <CommunityWall />}
+        {currentPage === 'community' && <CommunityWall setPage={handlePageChange} />}
         {currentPage === 'iste-standards' && <ISTEStandardsPage />}
         {currentPage === 'learning-studio' && !selectedDomain && (
           <LearningStudio onSelectDomain={(domain) => setSelectedDomain(domain)} />

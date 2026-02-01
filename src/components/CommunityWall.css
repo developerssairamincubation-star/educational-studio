@@ -11,9 +11,15 @@
 
 /* Header */
 .community-header {
-    text-align: left;
     margin-bottom: 2rem;
     padding-left: 4px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .community-header h2 {
@@ -29,6 +35,74 @@
 .community-header p {
     color: #4a4a4a;
     font-size: 0.95rem;
+    margin: 0;
+}
+
+/* User Profile Section */
+.user-profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    border: 1px solid #E8D4B8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4988C4;
+}
+
+.user-avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4988C4 0%, #3a6fa3 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.signout-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.signout-btn:hover {
+    color: #4988C4;
+}
+
+.signout-btn .material-symbols-outlined {
+    font-size: 16px;
 }
 
 /* Create Post Card */
@@ -379,4 +453,21 @@ button[type="submit"]:disabled {
 
 .hidden-file-input {
     display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .user-profile-section {
+        align-self: flex-start;
+    }
+
+    .community-header h2 {
+        font-size: 1.5rem;
+    }
 }
