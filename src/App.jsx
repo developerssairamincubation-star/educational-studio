@@ -7,7 +7,7 @@ import Fab from './components/Fab';
 // import SignIn from './components/SignIn';
 import CommunityWall from './components/CommunityWall';
 import ISTEStandardsPage from './components/ISTEStandardsPage';
-import ComingSoon from './components/ComingSoon';
+import XRZone from './components/XRZone';
 import LearningStudio from './components/LearningStudio';
 import DomainPathway from './components/DomainPathway';
 // import { auth } from './firebase';
@@ -82,7 +82,7 @@ function App() {
         {currentPage === 'learning-studio' && selectedDomain && (
           <DomainPathway domain={selectedDomain} onBack={() => setSelectedDomain(null)} />
         )}
-        {currentPage === 'xr-zone' && <ComingSoon pageName="XR Zone" />}
+        {currentPage === 'xr-zone' && <XRZone />}
       </div>
     </>
   );

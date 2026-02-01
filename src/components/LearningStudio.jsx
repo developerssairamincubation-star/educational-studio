@@ -66,29 +66,6 @@ const domains = [
         ]
     },
     {
-        id: 'spatial-computing',
-        title: 'Spatial Computing with Unity',
-        icon: 'view_in_ar',
-        color: '#000000',
-        description: 'Create immersive AR/VR experiences',
-        courses: [
-            { name: 'C# Free Tutorial Course (Beginner to Advanced)', url: 'https://youtu.be/qZpMX8Re_2Q?si=tmxiobsWZOzPlqfz' },
-            { name: 'Unity Beginner Tutorials', url: 'https://www.youtube.com/playlist?list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6' }
-        ]
-    },
-    {
-        id: 'game-dev-unreal',
-        title: 'Game Development with Unreal Engine',
-        icon: 'sports_esports',
-        color: '#313131',
-        description: 'Build professional games with Unreal Engine 5',
-        courses: [
-            { name: 'Unreal Engine 5 Beginner Tutorial', url: 'https://www.youtube.com/watch?v=L9qixi858Ag&list=PLIn-yd4vnXbjWeYqU7epakdnVzoysMToy' },
-            { name: 'Blueprint for Beginners', url: 'https://youtu.be/Xw9QEMFInYU?list=PLncmXJdh4q88DFCEVuGpOY3AGQwBvoQnh' },
-            { name: 'Blueprint for Intermediate', url: 'https://youtu.be/cFm4tZqgYvQ?list=PLncmXJdh4q88DFCEVuGpOY3AGQwBvoQnh' }
-        ]
-    },
-    {
         id: 'mechanical-design',
         title: 'Mechanical Design',
         icon: 'precision_manufacturing',
@@ -128,7 +105,7 @@ export default function LearningStudio({ onSelectDomain }) {
                     <h1>Learning Studio</h1>
                     <p className="learning-studio-subtitle">Open Educational Resources for Self-Learning</p>
                     <p className="learning-studio-intro">
-                        Explore curated learning pathways across 9 domains. Each pathway is designed to take you 
+                        Explore curated learning pathways across 7 domains. Each pathway is designed to take you 
                         from beginner to proficient with carefully selected open educational resources.
                     </p>
                 </motion.div>
