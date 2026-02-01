@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { ScrollControls } from '@react-three/drei';
 import Experience from './components/Experience';
 import Navigation from './components/Navigation';
@@ -21,6 +21,11 @@ function App() {
   const [selectedDomain, setSelectedDomain] = useState(null);
 
   const handlePageChange = (page) => {
+    // Redirect to external Quest Hub site
+    if (page === 'quest-hub') {
+      window.open('https://quest-hub-sairam.netlify.app/', '_blank');
+      return;
+    }
     setCurrentPage(page);
     setSelectedDomain(null); // Reset domain selection when changing pages
   };
@@ -77,7 +82,6 @@ function App() {
         {currentPage === 'learning-studio' && selectedDomain && (
           <DomainPathway domain={selectedDomain} onBack={() => setSelectedDomain(null)} />
         )}
-        {currentPage === 'quest-hub' && <ComingSoon pageName="Quest Hub" />}
         {currentPage === 'xr-zone' && <ComingSoon pageName="XR Zone" />}
       </div>
     </>
