@@ -2,63 +2,6 @@ import { motion } from 'framer-motion';
 import './ISTEStandardsPage.css';
 
 export default function ISTEStandardsPage() {
-    const leaderInMeResults = [
-        {
-            category: 'LEADERSHIP',
-            color: '#DC3545',
-            items: [
-                {
-                    title: 'STUDENT LEADERSHIP',
-                    description: 'Students develop the mindsets, behaviors and skills to be effective, lifelong leaders.'
-                },
-                {
-                    title: 'STAFF LEADERSHIP',
-                    description: 'Staff are provided with support to build their personal and professional capacity so they can confidently live, model, and teach life-ready leadership skills.'
-                },
-                {
-                    title: 'FAMILY & COMMUNITY ENGAGEMENT',
-                    description: 'Families and community organizations are valued school partners who support student development.'
-                }
-            ]
-        },
-        {
-            category: 'CULTURE',
-            color: '#28A745',
-            items: [
-                {
-                    title: 'SUPPORTIVE ENVIRONMENT FOR STUDENTS',
-                    description: 'School is a welcoming and supportive environment where students feel valued and actively engaged in leadership and decision making.'
-                },
-                {
-                    title: 'SUPPORTIVE ENVIRONMENT FOR STAFF',
-                    description: 'School is a supportive work environment, where staff members feel fulfilled, empowered, and confident in their ability to make a difference by working together.'
-                }
-            ]
-        },
-        {
-            category: 'ACADEMICS',
-            color: '#007BFF',
-            items: [
-                {
-                    title: 'GOAL ACHIEVEMENT',
-                    description: 'Students have the knowledge, opportunity, and support to set and achieve meaningful individual goals that are connected to larger schoolwide goals.'
-                },
-                {
-                    title: 'EMPOWERED LEARNERS',
-                    description: 'Students have the mindsets, skills, and supportive relationships they need to take ownership of their learning.'
-                },
-                {
-                    title: 'EMPOWERING TEACHERS',
-                    description: 'Teachers positively impact students\' academic growth by using evidence-based instructional practices that empower students to lead their own learning.'
-                },
-                {
-                    title: 'LIFE-READINESS (SECONDARY)',
-                    description: 'Students develop the skills and mindsets needed to succeed in college, career, and life.'
-                }
-            ]
-        }
-    ];
-
     const transformationalPrinciples = [
         {
             title: 'Nurture',
@@ -67,15 +10,15 @@ export default function ISTEStandardsPage() {
             items: [
                 {
                     subtitle: 'Cultivate Belonging',
-                    description: 'Create learning cultures that ensure safety, belonging, and foster empathy, creativity, and collaboration.'
+                    description: 'Educators prioritize relationship building in physical and virtual spaces. They strive to create learning cultures that ensure students\' safety and belonging and foster durable skills such as empathy, creativity, and collaboration.'
                 },
                 {
                     subtitle: 'Connect Learning to the Learner',
-                    description: 'Hold high expectations and tailor instruction to meet individual needs through differentiation strategies.'
+                    description: 'Educators hold high expectations for all students and tailor instruction to meet students\' individual needs and interests. They use differentiation strategies and impactful technology tools to embrace learner variability, increase engagement, and advance progress toward mastery.'
                 },
                 {
                     subtitle: 'Ensure Opportunity',
-                    description: 'Celebrate unique experiences, strengths, and voices while reducing barriers to meaningful learning.'
+                    description: 'Educators are responsive to students\' cultural and developmental contexts. They celebrate and build on students\' unique experiences, strengths, and voices. They reduce barriers to meaningful learning for all students.'
                 }
             ]
         },
@@ -86,15 +29,15 @@ export default function ISTEStandardsPage() {
             items: [
                 {
                     subtitle: 'Spark Curiosity',
-                    description: 'Connect content to prior knowledge, experiences, and passions to inspire engagement and expression.'
+                    description: 'Educators connect content and skills to students\' prior knowledge, experiences, and passions to spark curiosity and inspiration. Technology is used to create new pathways for student engagement and enable students to express knowledge, skills, and aspirations in a variety of ways.'
                 },
                 {
                     subtitle: 'Develop Expertise',
-                    description: 'Use evidence-based practices around key concepts, multiple modes of inquiry, and intentional practice.'
+                    description: 'Educators use evidence-based practices to ensure students learn and develop essential skills and knowledge. They frame learning around key conceptual understandings, use multiple modes of presentation and inquiry, model skills, and prioritize intentional practice.'
                 },
                 {
                     subtitle: 'Elevate Reflection',
-                    description: 'Provide timely feedback that encourages critical thinking and helps students monitor their own progress.'
+                    description: 'Educators use a variety of data and tools to provide timely and specific feedback to students that helps them understand how to improve and encourages critical thinking. Students are given time and support to reflect on, learn from, and apply feedback. They monitor their own progress and set goals.'
                 }
             ]
         },
@@ -105,11 +48,11 @@ export default function ISTEStandardsPage() {
             items: [
                 {
                     subtitle: 'Prioritize Authentic Experiences',
-                    description: 'Create opportunities for real-world learning through performance-based projects and assessments.'
+                    description: 'Educators create opportunities for students to apply and extend their learning in meaningful, real-world contexts. They facilitate authentic performance-based projects and assessments that elevate students\' roles as designers, creators, collaborators, and problem-solvers.'
                 },
                 {
                     subtitle: 'Ignite Agency',
-                    description: 'Encourage student agency through learner-led approaches and flexible learning formats for exploration.'
+                    description: 'Educators use a mix of learner-led approaches and flexible learning formats to encourage student agency and exploration. Students have opportunities to follow their own intellectual pursuits, take risks, make discoveries, challenge assumptions, and build lifelong learning skills.'
                 }
             ]
         }
@@ -403,106 +346,6 @@ export default function ISTEStandardsPage() {
                 </motion.div>
             </div>
 
-            {/* Leader in Me Results Section */}
-            <div className="leader-results-section">
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="leader-results-header"
-                >
-                    <h2>Measurable Results Targeted by Leader in Me</h2>
-                    <p>Building comprehensive student development across leadership, culture, and academics</p>
-                </motion.div>
-
-                <div className="leader-results-grid">
-                    {leaderInMeResults.map((section, sectionIndex) => (
-                        <div key={section.category} className="leader-category-section">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                                viewport={{ once: true }}
-                                className="category-header"
-                                style={{ '--category-color': section.color }}
-                            >
-                                <h3>{section.category}</h3>
-                            </motion.div>
-
-                            <div className="leader-cards-container">
-                                {section.items.map((item, itemIndex) => (
-                                    <motion.div
-                                        key={item.title}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: (sectionIndex * 0.1) + (itemIndex * 0.1) }}
-                                        viewport={{ once: true }}
-                                        className="flip-card"
-                                    >
-                                        <div className="flip-card-inner">
-                                            <div className="flip-card-front" style={{ '--card-color': section.color }}>
-                                                <h4>{item.title}</h4>
-                                            </div>
-                                            <div className="flip-card-back" style={{ '--card-color': section.color }}>
-                                                <p>{item.description}</p>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Transformational Learning Section */}
-            <div className="transformational-learning-section">
-                <div className="transformational-content">
-                    <div className="transformational-cards">
-                        {transformationalPrinciples.map((principle, index) => (
-                            <motion.div
-                                key={principle.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.15 }}
-                                viewport={{ once: true }}
-                                className="transformational-flip-card"
-                            >
-                                <div className="transformational-flip-inner">
-                                    <div className="transformational-flip-front" style={{ '--principle-color': principle.color }}>
-                                        <span className="principle-icon-large">{principle.icon}</span>
-                                        <h3>{principle.title}</h3>
-                                    </div>
-                                    <div className="transformational-flip-back" style={{ '--principle-color': principle.color }}>
-                                        <div className="flip-back-content">
-                                            {principle.items.map((item, itemIndex) => (
-                                                <div key={itemIndex} className="principle-item-flip">
-                                                    <strong>{item.subtitle}</strong> {item.description}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                    
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        viewport={{ once: true }}
-                        className="transformational-image"
-                    >
-                        <img 
-                            src="/images/tranforming_learning.png" 
-                            alt="Transformational Learning Principles" 
-                        />
-                        <p className="image-caption">Transformational Learning Framework</p>
-                    </motion.div>
-                </div>
-            </div>
-
             <div className="iste-content">
                 {standards.map((standard, index) => (
                     <motion.div
@@ -574,6 +417,63 @@ export default function ISTEStandardsPage() {
                         {index < standards.length - 1 && <div className="standard-divider"></div>}
                     </motion.div>
                 ))}
+            </div>
+
+            {/* Transformational Learning Section */}
+            <div className="transformational-learning-section">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="transformational-header"
+                >
+                    <h2>Transformational Learning Framework</h2>
+                    <p>Three core principles that guide effective teaching and learning</p>
+                </motion.div>
+
+                <div className="transformational-content">
+                    <div className="transformational-cards">
+                        {transformationalPrinciples.map((principle, index) => (
+                            <motion.div
+                                key={principle.title}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.15 }}
+                                viewport={{ once: true }}
+                                className="transformational-card"
+                                style={{ '--principle-color': principle.color }}
+                            >
+                                <div className="principle-header">
+                                    <span className="principle-icon">{principle.icon}</span>
+                                    <h3 style={{ color: principle.color }}>{principle.title}</h3>
+                                </div>
+                                
+                                <div className="principle-items">
+                                    {principle.items.map((item, itemIndex) => (
+                                        <div key={itemIndex} className="principle-item">
+                                            <h4 style={{ color: principle.color }}>{item.subtitle}</h4>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                    
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="transformational-image"
+                    >
+                        <img 
+                            src="/images/tranforming_learning.png" 
+                            alt="Transformational Learning Framework" 
+                        />
+                    </motion.div>
+                </div>
             </div>
         </div>
     );

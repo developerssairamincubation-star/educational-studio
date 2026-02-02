@@ -7,6 +7,7 @@ import Fab from './components/Fab';
 // import SignIn from './components/SignIn';
 import CommunityWall from './components/CommunityWall';
 import ISTEStandardsPage from './components/ISTEStandardsPage';
+import MeasurableResults from './components/MeasurableResults';
 import XRZone from './components/XRZone';
 import LearningStudio from './components/LearningStudio';
 import DomainPathway from './components/DomainPathway';
@@ -76,6 +77,7 @@ function App() {
         <Fab />
         {currentPage === 'community' && <CommunityWall setPage={handlePageChange} />}
         {currentPage === 'iste-standards' && <ISTEStandardsPage />}
+        {currentPage === 'measurable-results' && <MeasurableResults />}
         {currentPage === 'learning-studio' && !selectedDomain && (
           <LearningStudio onSelectDomain={(domain) => setSelectedDomain(domain)} />
         )}
