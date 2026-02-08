@@ -475,6 +475,62 @@ export default function ISTEStandardsPage() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Video Credits Section */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="video-credits-section"
+            >
+                <h3>Video Resources & Credits</h3>
+                <p className="credits-intro">
+                    The video content featured in this page is sourced from various educational creators 
+                    and organizations dedicated to advancing digital learning and ISTE Standards.
+                </p>
+                <div className="credits-list">
+                    <div className="credit-item">
+                        <span className="material-symbols-outlined">play_circle</span>
+                        <div>
+                            <strong>ISTE Official Channel</strong>
+                            <p>International Society for Technology in Education - Official resources and standards explanations</p>
+                        </div>
+                    </div>
+                    <div className="credit-item">
+                        <span className="material-symbols-outlined">play_circle</span>
+                        <div>
+                            <strong>Common Sense Education</strong>
+                            <p>Digital citizenship and responsible technology use resources</p>
+                        </div>
+                    </div>
+                    <div className="credit-item">
+                        <span className="material-symbols-outlined">play_circle</span>
+                        <div>
+                            <strong>Edutopia</strong>
+                            <p>Evidence-based teaching strategies and educational innovation content</p>
+                        </div>
+                    </div>
+                    <div className="credit-item">
+                        <span className="material-symbols-outlined">play_circle</span>
+                        <div>
+                            <strong>Google for Education</strong>
+                            <p>Technology integration and collaborative learning tools</p>
+                        </div>
+                    </div>
+                    <div className="credit-item">
+                        <span className="material-symbols-outlined">play_circle</span>
+                        <div>
+                            <strong>Various Educational Content Creators</strong>
+                            <p>Independent educators and technology specialists sharing best practices</p>
+                        </div>
+                    </div>
+                </div>
+                <p className="credits-note">
+                    All videos are used for educational purposes. Please visit the original content creators' 
+                    channels for more resources and to support their work.
+                </p>
+            </motion.div>
         </div>
     );
 }

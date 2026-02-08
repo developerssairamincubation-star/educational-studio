@@ -386,6 +386,85 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Video Credits Section */
+.video-credits-section {
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border-top: 4px solid #4988C4;
+}
+
+.video-credits-section h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a3a52;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.credits-intro {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    margin: 0 auto 25px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.credits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.credit-item {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.credit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.credit-item .material-symbols-outlined {
+    font-size: 2rem;
+    color: #4988C4;
+    flex-shrink: 0;
+}
+
+.credit-item strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #1a3a52;
+    margin-bottom: 4px;
+}
+
+.credit-item p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.credits-note {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .iste-standards-page {
@@ -509,3 +588,43 @@
     .transformational-image img {
         max-width: 100%;
     }
+    .video-credits-section {
+        margin: 30px auto 50px;
+        padding: 20px;
+    }
+
+    .video-credits-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .credits-intro {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .credits-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .credit-item {
+        padding: 12px;
+    }
+
+    .credit-item .material-symbols-outlined {
+        font-size: 1.8rem;
+    }
+
+    .credit-item strong {
+        font-size: 0.9rem;
+    }
+
+    .credit-item p {
+        font-size: 0.75rem;
+    }
+
+    .credits-note {
+        font-size: 0.8rem;
+        padding-top: 15px;
+    }
+}
